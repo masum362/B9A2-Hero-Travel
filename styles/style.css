@@ -26,6 +26,23 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    border-radius: 0.7rem;
+    background: #FF5400;
+    padding: 1rem 2rem;
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn>span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 /* header styles */
 
 header {
@@ -82,6 +99,79 @@ header>nav>.menu>ul>li>a {
 
 }
 
+/* banner styles */
+
+.banner-container {
+    background-image: url('../Images/Group\ 13\ \(1\)\ \(1\).png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.banner-container>.banner-content {
+    margin-top: 3rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.banner-container>.banner-content>.banner-title {
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.banner-container>.banner-content>.banner-description {
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 40rem;
+    text-align: center;
+}
+
+.banner-container>.banner-content>.input-box {
+    border-radius: 0.7rem;
+    background: rgba(255, 255, 255, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.banner-container>.banner-content>.input-box>#name {
+    padding: 1rem;
+    border-radius: 0.7rem;
+    border: none;
+    color: var(--secondary-color);
+}
+
+.banner-container>.banner-content>.input-box>#time,
+#type {
+    padding: 1rem;
+    border-radius: 0.7rem;
+    border: none;
+    outline: none;
+    color: var(--secondary-color);
+}
+
+.banner-container>.banner-content>.input-box>#time:focus {
+    border: none;
+}
+
+select>option {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid red;
+}
 
 /* mobile styles */
 
@@ -110,6 +200,27 @@ header>nav>.menu>ul>li>a {
 
     header>nav>.menu>ul {
         display: none;
+    }
+
+    /* banner styles */
+    .banner-container {
+        margin-top: 2rem;
+       
+    }
+    .banner-container > .banner-content{
+        gap: 1rem;
+    }
+
+    .banner-container>.banner-content>.banner-title {
+        font-size: 1.3rem;
+    }
+    .banner-container>.banner-content>.banner-description {
+        width: 20rem;
+    }
+
+    .banner-container>.banner-content>.input-box {
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 
 }
