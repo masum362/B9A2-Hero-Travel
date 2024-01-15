@@ -32,7 +32,7 @@ a {
     font-weight: 800;
 }
 
-.description{
+.description {
     color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 400;
@@ -50,6 +50,9 @@ a {
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -180,7 +183,7 @@ header>nav>.menu>ul>li>a {
 select>option {
     margin: 1rem;
     padding: 1rem;
-    
+
 }
 
 
@@ -398,7 +401,8 @@ main section {
     align-items: center;
     flex-wrap: wrap;
 }
-.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>.discount-package > .individual-package{
+
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>.discount-package>.individual-package {
     display: flex;
     align-items: center;
 }
@@ -413,29 +417,85 @@ main section {
     right: auto;
 }
 
-.lostPlace-container{
+.lostPlace-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
 }
-.lostPlace-container >div > ul{
+
+.lostPlace-container>div>ul {
     margin-left: 1rem;
     color: var(--heading-color);
     font-weight: 700;
 }
-.lostPlace-container > div{
+
+.lostPlace-container>div {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 1rem;
     width: 50%;
-    
+
 }
 
-.lostPlace-container > div > .ytvideo{
+.lostPlace-container>div>.ytvideo {
     width: 100%;
     height: 315px;
+}
+
+.newslatter-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.newslatter-container>.newslatter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+}
+
+.newslatter-container>.newslatter-content>.newslatter-title {
+    color: var(--heading-color);
+    font-size: 24px;
+    font-weight: 800;
+
+}
+
+.newslatter-container>.newslatter-content>.newslatter-description {
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+.newslatter-container>.newslatter-content> input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+background: rgba(19, 19, 24, 0.05);
+}
+
+.newslatter-container>.newslatter-img {
+    position: relative;
+}
+
+.newslatter-container>.newslatter-img>button {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 3rem;
+    transform: rotate(-20deg);
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.newslatter-container>.newslatter-img>button>.save {
+    font-weight: 800;
 }
 
 @media screen and (max-width: 600px) {
@@ -514,7 +574,7 @@ main section {
     .destination-container {
         width: 100%;
         align-items: start;
-        
+
         overflow: hidden;
         margin: 0px auto;
         padding: 1rem;
@@ -546,7 +606,7 @@ main section {
     .choose-container {
         align-items: start;
         text-align: start;
-        
+
 
     }
 
@@ -579,7 +639,7 @@ main section {
 
     .discount-container>.discount-items>.discount-each-item {
         height: 100vh;
-        
+
 
     }
 
@@ -619,18 +679,34 @@ main section {
         margin: 1rem;
     }
 
-.discount-container > .btn{
-    margin: 0 auto;
-}
+    .discount-container>.btn {
+        margin: 0 auto;
+    }
 
-.lostPlace-container{
-    flex-direction: column;
-}
-.lostPlace-container > div{
-    width: 100%;
-}
-.lostPlace-container > div > .ytvideo{
-    width: 100%;
-}
+    .lostPlace-container {
+        flex-direction: column;
+    }
+
+    .lostPlace-container>div {
+        width: 100%;
+    }
+
+    .lostPlace-container>div>.ytvideo {
+        width: 100%;
+    }
+    .newslatter-container{
+        flex-direction: column;
+    }
+    .newslatter-container > div{
+        width: 100%;
+        border: 1px solid red;
+    }
+    .newslatter-container > div >img{
+        width: 100%;
+    }
+    .newslatter-container > div > .btn{
+        font-size: 1rem;
+        bottom: 2rem;
+    }
 
 }
