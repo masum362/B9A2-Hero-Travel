@@ -1,5 +1,115 @@
-*{
+:root {
+    --theme-color: #FF5400;
+    --heading-color: #131318;
+    --white-color: #fff;
+    --secondary-color: #5A5A5D;
+}
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.theme {
+    color: var(--theme-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header styles */
+
+header {
+    padding: 2rem 5rem;
+}
+
+header>nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header>nav>.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+header>nav>.logo>h1 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+header>nav>.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header>nav>.menu>.hambarger {
+    display: none;
+}
+
+header>nav>.menu>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header>nav>.menu>ul>li {
+    list-style-type: none;
+}
+
+header>nav>.menu>ul>li>a {
+    color: var(--secondary-color);
+    font-size: 1.1;
+    font-weight: 700;
+    position: relative;
+    padding: 0.5rem;
+
+}
+
+
+/* mobile styles */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 1rem;
+    }
+
+    header>nav>.logo {
+        gap: 0.5rem;
+    }
+
+    header>nav>.logo>h1 {
+        font-size: 1.2rem;
+
+    }
+
+    header>nav>.logo>img {
+        width: 1.7rem;
+    }
+
+    header>nav>.menu>.hambarger {
+        display: block;
+    }
+
+    header>nav>.menu>ul {
+        display: none;
+    }
+
 }
