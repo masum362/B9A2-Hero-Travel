@@ -26,6 +26,12 @@ a {
     text-decoration: none;
 }
 
+.title {
+    color: var(--heading-color);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
 .btn {
     border-radius: 0.7rem;
     background: #FF5400;
@@ -168,7 +174,7 @@ header>nav>.menu>ul>li>a {
 select>option {
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid red;
+    
 }
 
 
@@ -215,6 +221,9 @@ main section {
 .tour-container>.tour-content>ul {
     margin-left: 1rem;
 }
+
+
+
 
 /* destination stles */
 .destination-container {
@@ -265,6 +274,9 @@ main section {
     justify-content: center;
     color: var(--white-color);
 }
+
+
+/* choose styles */
 
 .choose-container {
     display: flex;
@@ -320,6 +332,84 @@ main section {
     border: 1px solid rgba(233, 68, 68, 0.20);
     background: rgba(233, 68, 68, 0.05);
 }
+
+/* discount styles */
+.discount-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.discount-container>.discount-description {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    width: 40rem;
+}
+
+.discount-container>.discount-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.discount-container>.discount-items>.discount-each-item {
+    position: relative;
+}
+
+.discount-container>.discount-items>.discount-each-item>img {
+    width: 100%;
+}
+
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content {
+    position: absolute;
+    right: 3rem;
+    top: 6.5rem;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>p {
+    text-align: start;
+    width: 25rem;
+}
+
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>h1 {
+    font-size: 1.3rem;
+}
+
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>.discount-package {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.discount-container>.discount-items>.discount-each-item>.discount-each-item-content>.discount-package > .individual-package{
+    display: flex;
+    align-items: center;
+}
+
+#discount-reflect>img {
+    transform: scaleX(-1);
+}
+
+#discount-reflect>.discount-each-item-content {
+    left: 3rem;
+    top: 6.5rem;
+    right: auto;
+}
+
+
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -398,7 +488,7 @@ main section {
     .destination-container {
         width: 100%;
         align-items: start;
-        border: 1px solid red;
+        
         overflow: hidden;
         margin: 0px auto;
         padding: 1rem;
@@ -422,15 +512,16 @@ main section {
     .destination-container>.destination-items>div {
         width: 100%;
     }
-    .destination-container>.destination-items>div>img{
+
+    .destination-container>.destination-items>div>img {
         width: 100%;
     }
 
-    .choose-container{
+    .choose-container {
         align-items: start;
         text-align: start;
-        border: 1px solid red;
         
+
     }
 
     .choose-container>.choose-title {
@@ -442,8 +533,69 @@ main section {
         font-size: 0.9rem;
         width: 100%;
     }
-    .choose-container > .choose-items{
+
+    .choose-container>.choose-items {
         width: 100%;
     }
+
+    .discount-container {
+        align-items: start;
+        text-align: start;
+    }
+
+    .discount-container>.title {
+        font-size: 1.1rem;
+    }
+
+    .discount-container>.discount-description {
+        width: 100%;
+    }
+
+    .discount-container>.discount-items>.discount-each-item {
+        height: 100vh;
+        
+
+    }
+
+    .discount-container>.discount-items>.discount-each-item>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .discount-container>.discount-items>.discount-each-item>.discount-each-item-content>p {
+        width: 100%;
+    }
+
+    .discount-container>.discount-items>.discount-each-item>.discount-each-item-content>.discount-package {
+        flex-wrap: wrap;
+    }
+
+    .discount-container>.discount-items>.discount-each-item>.discount-each-item-content {
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    #discount-reflect>img {
+        transform: scaleX(1);
+    }
+
+    #discount-reflect>.discount-each-item-content {
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+.discount-container > .btn{
+    margin: 0 auto;
+}
+
 
 }
