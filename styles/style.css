@@ -36,12 +36,10 @@ a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-.btn>span {
-    font-size: 1rem;
-    font-weight: 700;
-}
 
 /* header styles */
 
@@ -173,6 +171,48 @@ select>option {
     border: 1px solid red;
 }
 
+
+/* main styles */
+main section {
+    margin: 2rem 5rem;
+}
+
+/* tour styles */
+
+.tour-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.tour-container>.tour-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    color: var(--secondary-color);
+    width: 35rem;
+}
+.tour-container > .tour-image > img{
+    width: 100%;
+}
+
+.tour-container>.tour-content>.tour-title {
+    color: var(--heading-color);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+.tour-container>.tour-content>.tour-description {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.tour-container>.tour-content>ul{
+    margin-left: 1rem;
+}
+
+
 /* mobile styles */
 
 @media screen and (max-width: 600px) {
@@ -205,22 +245,46 @@ select>option {
     /* banner styles */
     .banner-container {
         margin-top: 2rem;
-       
+
     }
-    .banner-container > .banner-content{
+
+    .banner-container>.banner-content {
+justify-content: end;
         gap: 1rem;
     }
 
     .banner-container>.banner-content>.banner-title {
         font-size: 1.3rem;
     }
+
     .banner-container>.banner-content>.banner-description {
         width: 20rem;
     }
 
     .banner-container>.banner-content>.input-box {
-        flex-direction: column;
+        flex-direction: column;     
         margin-bottom: 2rem;
+    }
+
+    main > section {
+        margin: 2rem 1rem;
+    }
+
+    .tour-container{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .tour-container > .tour-content {
+        width: 100%;
+    }
+    .tour-container > .tour-image {
+        width: 100%;
+    }
+
+    .tour-container>.tour-content>.tour-title {
+        font-size: 1.2rem;
+        font-weight: 800;
     }
 
 }
