@@ -10,6 +10,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+select , option {
+    cursor: pointer;
+}
 
 body {
     max-width: 1440px;
@@ -54,8 +57,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
+.btn:hover{
+    background-color: #c54f14;
+}
 
 /* header styles */
 
@@ -264,11 +271,18 @@ main section {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-
+    margin-bottom: 1rem;
+    
 }
 
 .destination-container>.destination-items>div>div {
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+.destination-container>.destination-items>div>div:hover{
+    transform: scale(1.05);
 }
 
 /* .row-1 > div{
