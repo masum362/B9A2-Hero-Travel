@@ -117,7 +117,10 @@ header>nav>.menu>ul>li>a {
     font-weight: 700;
     position: relative;
     padding: 0.5rem;
-
+    transition: all 0.3s ease-in-out;
+}
+header>nav>.menu>ul>li>a:hover{
+    color:var(--theme-color);
 }
 
 /* banner styles */
